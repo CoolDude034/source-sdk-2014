@@ -131,6 +131,13 @@ public:
 		return ToHScript( gEntList.FindEntityByClassnameNearest2D( szName, vecSrc, flRadius ) );
 	}
 
+#ifdef MAPBASE_VSCRIPT
+	HSCRIPT GetWorld()
+	{
+		return ToHScript(GetWorldEntity());
+	}
+#endif
+
 	// 
 	// Custom Procedurals
 	// 
